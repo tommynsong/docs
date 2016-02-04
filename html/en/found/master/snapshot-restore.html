@@ -2,7 +2,7 @@
 <!DOCTYPE HTML>
 <html lang="en-us">
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>ELK and Found</title><meta name="generator" content="DocBook XSL Stylesheets V1.78.1" /><link rel="home" href="index.html" title="Found Documentation" /><link rel="up" href="cluster-config.html" title="Cluster Configuration" /><link rel="prev" href="changing-a-cluster.html" title="Changing a Cluster" /><link rel="next" href="marvel.html" title="Monitoring with Marvel" /><meta name="DC.type" content="Docs/Found/Reference" />
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>Backup / Snapshot</title><meta name="generator" content="DocBook XSL Stylesheets V1.78.1" /><link rel="home" href="index.html" title="Found Documentation" /><link rel="up" href="index.html" title="Found Documentation" /><link rel="prev" href="access-control.html" title="Access Control" /><link rel="next" href="restoring-snapshots.html" title="Restoring Snapshots" /><meta name="DC.type" content="Docs/Found/Reference" />
   
  	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
 
@@ -51,17 +51,27 @@
 	<meta property="og:image" content="https://www.elastic.co/static/img/elastic-logo-200.png" />
 	
 
+		<link rel="alternate" href="https://stag-www.elastic.co/guide_template" hreflang="en-us" />
+	
+		<link rel="alternate" href="https://stag-www.elastic.co/de/guide_template" hreflang="de-de" />
+	
+		<link rel="alternate" href="https://stag-www.elastic.co/fr/guide_template" hreflang="fr-fr" />
+	
+		<link rel="alternate" href="https://stag-www.elastic.co/jp/guide_template" hreflang="ja-jp" />
+	
+		<link rel="alternate" href="https://stag-www.elastic.co/kr/guide_template" hreflang="ko-kr" />
+	
 
 	
-	<link type="text/css" rel="stylesheet" href="https://static-www.elastic.co/static/css/skel.css?q=123" />
-	<link type="text/css" rel="stylesheet" href="https://static-www.elastic.co/static/css/style.css?q=123" />	
-	<script src="https://static-www.elastic.co/static/js/skel.min.js?q=123"></script>
+	<link type="text/css" rel="stylesheet" href="https://stag-static-www.elastic.co/static/css/skel.css?q=127" />
+	<link type="text/css" rel="stylesheet" href="https://stag-static-www.elastic.co/static/css/style.css?q=127" />	
+	<script src="https://stag-static-www.elastic.co/static/js/skel.min.js?q=127"></script>
 	
-		<script type="text/javascript">form_name = "" ; cdn_url="https://static-www.elastic.co";cdn_slug = "123"</script>
+		<script type="text/javascript">form_name = "" ; cdn_url="https://stag-static-www.elastic.co";cdn_slug = "127"</script>
 	
-	<script src="https://static-www.elastic.co/static/js/init.js?q=123"></script>
-	<script src="https://static-www.elastic.co/static/js/jquery.min.js?q=123"></script>
-	<script src="https://static-www.elastic.co/static/js/jquery.cookie.js?q=123"></script>
+	<script src="https://stag-static-www.elastic.co/static/js/init.js?q=127"></script>
+	<script src="https://stag-static-www.elastic.co/static/js/jquery.min.js?q=127"></script>
+	<script src="https://stag-static-www.elastic.co/static/js/jquery.cookie.js?q=127"></script>
 	<!--<script type="text/javascript">
 	    (function() {
 	        var path = '//easy.myfonts.net/v2/js?sid=10336(font-family=Avenir+35+Light)&sid=10338(font-family=Avenir+55+Roman)&sid=10340(font-family=Avenir+85+Heavy)&sid=10344(font-family=Avenir+65+Medium)&key=nAD6PCOPrX',
@@ -683,15 +693,15 @@
 	
 	
 		.m-shortcuts li a.m-search {
-			background: url("https://static-www.elastic.co/assets/blt174b13be89ff803c/m-search-icon.png?q=123") no-repeat scroll center center rgba(0, 0, 0, 0);
+			background: url("https://stag-static-www.elastic.co/assets/blt174b13be89ff803c/m-search-icon.png?q=127") no-repeat scroll center center rgba(0, 0, 0, 0);
 			background-size: contain;}
 	
 		.m-shortcuts li a.m-docs {
-			background: url("https://static-www.elastic.co/assets/blt5ba03f594a7d610a/m-guide-icon.png?q=123") no-repeat scroll center center rgba(0, 0, 0, 0);
+			background: url("https://stag-static-www.elastic.co/assets/blt5ba03f594a7d610a/m-guide-icon.png?q=127") no-repeat scroll center center rgba(0, 0, 0, 0);
 			background-size: contain;}
 	
 		.m-shortcuts li a.m-contact {
-			background: url("https://static-www.elastic.co/assets/blt38c3e853c4b1174d/m-contact-icon.png?q=123") no-repeat scroll center center rgba(0, 0, 0, 0);
+			background: url("https://stag-static-www.elastic.co/assets/blt38c3e853c4b1174d/m-contact-icon.png?q=127") no-repeat scroll center center rgba(0, 0, 0, 0);
 			background-size: contain;}
 		
 </style>
@@ -711,30 +721,39 @@
 <section id="guide">
 
             <!-- start body -->
-<div class="breadcrumbs"><span class="breadcrumb-link"><a href="index.html">Found Documentation</a></span> » <span class="breadcrumb-link"><a href="cluster-config.html">Cluster Configuration </a></span> » <span class="breadcrumb-node">ELK and Found</span></div><div class="navheader"><span class="prev"><a href="changing-a-cluster.html">
+<div class="breadcrumbs"><span class="breadcrumb-link"><a href="index.html">Found Documentation</a></span> » <span class="breadcrumb-node">Backup / Snapshot </span></div><div class="navheader"><span class="prev"><a href="access-control.html">
               « 
-              Changing a Cluster</a>
+              Access Control</a>
            
         </span><span class="next">
            
-          <a href="marvel.html">Monitoring with Marvel
+          <a href="restoring-snapshots.html">Restoring Snapshots
                »
-            </a></span></div><div class="chapter"><div class="titlepage"><div><div><h2 class="title"><a id="elk-and-found"></a>ELK and Found</h2></div></div></div><p>The ELK stack – Elasticsearch, Logstash, and Kibana – is very popular for handling logs.</p><p>When you use the ELK stack and Found, Found takes care of the Elasticsearch and the Kibana component. For now, you will need to run Logstash yourself.</p><div class="section"><div class="titlepage"><div><div><h2 class="title"><a id="_using_kibana_4"></a>Using Kibana 4</h2></div></div></div><p>Found now provides both Kibana 3 and Kibana 4.</p><p>To enable Kibana 4 on your cluster, make sure your Elasticsearch cluster is on version 1.6.0 or newer.</p><p>Then, go to the configuration page for your cluster and click on "Enable" in the Kibana 4 pane. This will provide you with a new URL, which gives you access to Kibana 4. It can take a couple of seconds to get ready right after you click "Enable", so if you get an error message, try again in a couple of seconds.</p><p>You will need to provide the Kibana 4 endpoint with credentials that can be used to access the necessary Elasticsearch resources. This means granting read access to the necessary indexes, as well as access to update the <code class="literal">.kibana</code> index.</p></div><div class="section"><div class="titlepage"><div><div><h2 class="title"><a id="_using_logstash"></a>Using Logstash</h2></div></div></div><p>Configuring your Logstash agents to send their logs to your Elasticsearch cluster on Found is easy.</p><p>To send logs to Elasticsearch, you will need to use the <a class="ulink" href="https://www.elastic.co/guide/en/logstash/current/plugins-outputs-elasticsearch.html" target="_top">elasticsearch-output</a></p><p>To point it at Found, you should configure it like the following. You need to specify the right <code class="literal">host</code>, a <code class="literal">user</code> and <code class="literal">password</code> according to your <a class="link" href="access-control.html" title="Access Control">Access Control</a>, set the <code class="literal">protocol</code> to <code class="literal">http</code>, enable <code class="literal">ssl</code> and set the <code class="literal">port</code> to 9243 or 443.</p><div class="pre_wrapper"><pre class="programlisting prettyprint lang-json">output {
-  elasticsearch {
-    host =&gt; "1923a78952f7e6c94fa5c998e5fc6286c0941b90.eu-west-1.aws.found.io"
-    user =&gt; "readwrite"
-    password =&gt; "3r15qw0vibri9jv6rn"
-    protocol =&gt; http
-    ssl =&gt; true
-    port =&gt; "9243"
+            </a></span></div><div class="part"><div class="titlepage"><div><div><h1 class="title"><a id="snapshot-restore"></a>Backup / Snapshot </h1></div></div></div><div class="partintro"><div></div><p>We support all of Elasticsearch’s Snapshot/Restore-API. You can also add <a class="link" href="custom-repository.html" title="Snapshot/Restore with Custom Repository">custom repositories with your own S3-buckets</a>.</p><p>This page explains details specific to Found. For up-to-date documentation on snapshot/restore-APIs, please consult the official <a class="ulink" href="https://www.elastic.co/guide/en/elasticsearch/reference/1.7/modules-snapshots.html" target="_top">Snapshot/Restore-documentation</a>.</p><h2><a id="_default_repository"></a>Default Repository</h2><p>When you create a cluster, a repository called <code class="literal">found-snapshots</code> is automatically added to the cluster.</p><p>This repository is specific to that cluster: the cluster’s ID is part of the repository’s <code class="literal">base_path</code>, i.e., <code class="literal">/snapshots/[cluster-id]</code>.</p><h2><a id="_sharing_a_repository_across_clusters"></a>Sharing a Repository Across Clusters</h2><p>You can create a custom repository that references another cluster’s repository, assuming the clusters are in the same region.</p><p>If you do a <code class="literal">GET /_snapshot/found-snapshots</code>-request, you can find the name of your bucket. Here’s an example:</p><div class="pre_wrapper"><pre class="programlisting prettyprint lang-json">{
+  "found-snapshots" : {
+    "type" : "s3",
+    "settings" : {
+      "base_path" : "/snapshots/[cluster-id]",
+      "compress" : "true",
+      "region" : "eu-west-1",
+      "bucket" : "found-user-[random-string]"
+    }
   }
-}</pre></div></div></div><div class="navfooter"><span class="prev"><a href="changing-a-cluster.html">
+}</pre></div><p>The bucket name, <code class="literal">found-user-[random-string]</code>, is the same for all your clusters in that region. All nodes in your clusters in that region are configured with credentials that have access to that bucket. The only thing that differs is the <code class="literal">base_path</code>.</p><p>Thus, you can easily create a reference to another cluster’s repository by creating a second repository. For example, if you have a production cluster you want to copy indexes from, you can do a <code class="literal">PUT /_snapshot/production</code> with the following body to create a second repository:</p><div class="pre_wrapper"><pre class="programlisting prettyprint lang-json">{
+  "type": "s3",
+  "settings": {
+    "base_path": "/snapshots/[production-cluster-id]",
+    "compress": "true",
+    "region": "eu-west-1",
+    "bucket": "found-user-[random-string-see-above-how-to-find-it]"
+  }
+}</pre></div><p>You will then be able to restore indexes from the production cluster to another cluster by, for example, running <code class="literal">POST /_snapshot/production/_restore</code>.</p><div class="note admon"><div class="icon"><img alt="Note" src="images/icons/note.png" /></div><div class="admon_content"><p>When you use the same repository across clusters, you are responsible for not writing to the same location at the same time.</p></div></div><p><span class="inlinemediaobject"><img src="images/snapshotrestore_full.png" alt="Snapshot Restore" /></span></p></div></div><div class="navfooter"><span class="prev"><a href="access-control.html">
               « 
-              Changing a Cluster</a>
+              Access Control</a>
            
         </span><span class="next">
            
-          <a href="marvel.html">Monitoring with Marvel
+          <a href="restoring-snapshots.html">Restoring Snapshots
                »
             </a></span></div>
 <!-- end body -->
@@ -833,15 +852,15 @@
 
 <style type="text/css">
 	
-		.facebook{background:url("https://static-www.elastic.co/assets/bltda40eebd7c7cae9a/facebook.svg?q=123") no-repeat;}		
+		.facebook{background:url("https://stag-static-www.elastic.co/assets/bltda40eebd7c7cae9a/facebook.svg?q=127") no-repeat;}		
 	
-		.twitter{background:url("https://static-www.elastic.co/assets/bltfd3b1511512f4632/twitter.svg?q=123") no-repeat;}		
+		.twitter{background:url("https://stag-static-www.elastic.co/assets/bltfd3b1511512f4632/twitter.svg?q=127") no-repeat;}		
 	
-		.linkedin{background:url("https://static-www.elastic.co/assets/blt6b4f6f8d6b96f814/linkedin.svg?q=123") no-repeat;}		
+		.linkedin{background:url("https://stag-static-www.elastic.co/assets/blt6b4f6f8d6b96f814/linkedin.svg?q=127") no-repeat;}		
 	
-		.xing{background:url("https://static-www.elastic.co/assets/blta76b2ae2b2f10a98/xing.svg?q=123") no-repeat;}		
+		.xing{background:url("https://stag-static-www.elastic.co/assets/blta76b2ae2b2f10a98/xing.svg?q=127") no-repeat;}		
 	
-		.youtube{background:url("https://static-www.elastic.co/assets/blt5761648c9581fb53/youtube.svg?q=123") no-repeat;}		
+		.youtube{background:url("https://stag-static-www.elastic.co/assets/blt5761648c9581fb53/youtube.svg?q=127") no-repeat;}		
 	
 </style>
 
@@ -865,8 +884,8 @@ MktoForms2.loadForm("//app-lon02.marketo.com", "813-MAM-392", 1398,function(form
    	<script type="text/javascript">
 	var suggestionsUrl = "https://search.elastic.co/suggest";	
 </script>
-<script src="https://static-www.elastic.co/static/js/jquery.autocomplete.js?q=123"></script>
-<script src="https://static-www.elastic.co/static/js/script.js?q=123"></script>
+<script src="https://stag-static-www.elastic.co/static/js/jquery.autocomplete.js?q=127"></script>
+<script src="https://stag-static-www.elastic.co/static/js/script.js?q=127"></script>
 
 
    	

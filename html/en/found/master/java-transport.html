@@ -2,7 +2,7 @@
 <!DOCTYPE HTML>
 <html lang="en-us">
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>Snapshot/Restore with Custom Repository</title><meta name="generator" content="DocBook XSL Stylesheets V1.78.1" /><link rel="home" href="index.html" title="Found Documentation" /><link rel="up" href="snapshot-restore.html" title="Backup / Snapshot" /><link rel="prev" href="restoring-snapshots.html" title="Restoring Snapshots" /><link rel="next" href="official-plugins.html" title="Plugins" /><meta name="DC.type" content="Docs/Found/Reference" />
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>Found Elasticsearch Transport Module</title><meta name="generator" content="DocBook XSL Stylesheets V1.78.1" /><link rel="home" href="index.html" title="Found Documentation" /><link rel="up" href="getting-started.html" title="Getting Started" /><link rel="prev" href="preflight-checklist.html" title="Preflight Checklist" /><link rel="next" href="cluster-config.html" title="Cluster Configuration" /><meta name="DC.type" content="Docs/Found/Reference" />
   
  	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
 
@@ -51,17 +51,27 @@
 	<meta property="og:image" content="https://www.elastic.co/static/img/elastic-logo-200.png" />
 	
 
+		<link rel="alternate" href="https://stag-www.elastic.co/guide_template" hreflang="en-us" />
+	
+		<link rel="alternate" href="https://stag-www.elastic.co/de/guide_template" hreflang="de-de" />
+	
+		<link rel="alternate" href="https://stag-www.elastic.co/fr/guide_template" hreflang="fr-fr" />
+	
+		<link rel="alternate" href="https://stag-www.elastic.co/jp/guide_template" hreflang="ja-jp" />
+	
+		<link rel="alternate" href="https://stag-www.elastic.co/kr/guide_template" hreflang="ko-kr" />
+	
 
 	
-	<link type="text/css" rel="stylesheet" href="https://static-www.elastic.co/static/css/skel.css?q=123" />
-	<link type="text/css" rel="stylesheet" href="https://static-www.elastic.co/static/css/style.css?q=123" />	
-	<script src="https://static-www.elastic.co/static/js/skel.min.js?q=123"></script>
+	<link type="text/css" rel="stylesheet" href="https://stag-static-www.elastic.co/static/css/skel.css?q=127" />
+	<link type="text/css" rel="stylesheet" href="https://stag-static-www.elastic.co/static/css/style.css?q=127" />	
+	<script src="https://stag-static-www.elastic.co/static/js/skel.min.js?q=127"></script>
 	
-		<script type="text/javascript">form_name = "" ; cdn_url="https://static-www.elastic.co";cdn_slug = "123"</script>
+		<script type="text/javascript">form_name = "" ; cdn_url="https://stag-static-www.elastic.co";cdn_slug = "127"</script>
 	
-	<script src="https://static-www.elastic.co/static/js/init.js?q=123"></script>
-	<script src="https://static-www.elastic.co/static/js/jquery.min.js?q=123"></script>
-	<script src="https://static-www.elastic.co/static/js/jquery.cookie.js?q=123"></script>
+	<script src="https://stag-static-www.elastic.co/static/js/init.js?q=127"></script>
+	<script src="https://stag-static-www.elastic.co/static/js/jquery.min.js?q=127"></script>
+	<script src="https://stag-static-www.elastic.co/static/js/jquery.cookie.js?q=127"></script>
 	<!--<script type="text/javascript">
 	    (function() {
 	        var path = '//easy.myfonts.net/v2/js?sid=10336(font-family=Avenir+35+Light)&sid=10338(font-family=Avenir+55+Roman)&sid=10340(font-family=Avenir+85+Heavy)&sid=10344(font-family=Avenir+65+Medium)&key=nAD6PCOPrX',
@@ -683,15 +693,15 @@
 	
 	
 		.m-shortcuts li a.m-search {
-			background: url("https://static-www.elastic.co/assets/blt174b13be89ff803c/m-search-icon.png?q=123") no-repeat scroll center center rgba(0, 0, 0, 0);
+			background: url("https://stag-static-www.elastic.co/assets/blt174b13be89ff803c/m-search-icon.png?q=127") no-repeat scroll center center rgba(0, 0, 0, 0);
 			background-size: contain;}
 	
 		.m-shortcuts li a.m-docs {
-			background: url("https://static-www.elastic.co/assets/blt5ba03f594a7d610a/m-guide-icon.png?q=123") no-repeat scroll center center rgba(0, 0, 0, 0);
+			background: url("https://stag-static-www.elastic.co/assets/blt5ba03f594a7d610a/m-guide-icon.png?q=127") no-repeat scroll center center rgba(0, 0, 0, 0);
 			background-size: contain;}
 	
 		.m-shortcuts li a.m-contact {
-			background: url("https://static-www.elastic.co/assets/blt38c3e853c4b1174d/m-contact-icon.png?q=123") no-repeat scroll center center rgba(0, 0, 0, 0);
+			background: url("https://stag-static-www.elastic.co/assets/blt38c3e853c4b1174d/m-contact-icon.png?q=127") no-repeat scroll center center rgba(0, 0, 0, 0);
 			background-size: contain;}
 		
 </style>
@@ -711,43 +721,107 @@
 <section id="guide">
 
             <!-- start body -->
-<div class="breadcrumbs"><span class="breadcrumb-link"><a href="index.html">Found Documentation</a></span> » <span class="breadcrumb-link"><a href="snapshot-restore.html">Backup / Snapshot </a></span> » <span class="breadcrumb-node">Snapshot/Restore with Custom Repository</span></div><div class="navheader"><span class="prev"><a href="restoring-snapshots.html">
+<div class="breadcrumbs"><span class="breadcrumb-link"><a href="index.html">Found Documentation</a></span> » <span class="breadcrumb-link"><a href="getting-started.html">Getting Started </a></span> » <span class="breadcrumb-node">Found Elasticsearch Transport Module</span></div><div class="navheader"><span class="prev"><a href="preflight-checklist.html">
               « 
-              Restoring Snapshots</a>
+              Preflight Checklist</a>
            
         </span><span class="next">
            
-          <a href="official-plugins.html">Plugins 
+          <a href="cluster-config.html">Cluster Configuration 
                »
-            </a></span></div><div class="chapter"><div class="titlepage"><div><div><h2 class="title"><a id="custom-repository"></a>Snapshot/Restore with Custom Repository</h2></div></div></div><p>We support specifying your own S3 repositories to snapshot to and restore from. This can be useful, for example, to do long-term archiving of old indexes, or to be certain you have an exit strategy should you need to move away from our service.</p><div class="section"><div class="titlepage"><div><div><h2 class="title"><a id="_preparing_a_bucket"></a>Preparing a Bucket</h2></div></div></div><p>Create the bucket with your custom AWS account. Make sure the bucket is in the same region as your cluster.</p><p>Then, create an IAM user, copy the access key ID and secret, then configure the following user policy. This is important to make sure the access keys, which you will need to provide to your cluster, can only access the intended bucket.</p><div class="pre_wrapper"><pre class="programlisting prettyprint lang-json">{
-  "Statement": [
-    {
-      "Action": [
-        "s3:*"
-      ],
-      "Effect": "Allow",
-      "Resource": [
-        "arn:aws:s3:::bucket-name",
-        "arn:aws:s3:::bucket-name/*"
-      ]
+            </a></span></div><div class="chapter"><div class="titlepage"><div><div><h2 class="title"><a id="java-transport"></a>Found Elasticsearch Transport Module</h2></div></div></div><div class="note admon"><div class="icon"><img alt="Note" src="images/icons/note.png" /></div><div class="admon_content"><p>This document shows how to use the transport client on a cluster that does not use <a class="link" href="shield.html" title="Shield">Shield</a>. We recommend configuring your cluster to use Shield, then <a class="link" href="shield.html#shield-transport" title="Shield and the Java Transport Client">configure your transport client</a> for it.</p></div></div><p><span class="strong"><strong>How to Use the Transport Protocol with a Cluster Hosted at Found.</strong></span></p><p>In order to connect to a cluster running at Found with the transport protocol, a plugin is required for the client. The reason for this plugin is to extend the transport protocol with three crucial features:</p><div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem">
+Authentication
+</li><li class="listitem">
+SSL encryption
+</li><li class="listitem">
+Cluster handshake
+</li></ul></div><p>The two first are an obvious necessity when sending your traffic over the internet and the last one is to let our proxies know which cluster your client is trying to connect to.</p><p><span class="strong"><strong>The transport module is backwards-compatible with the default transport module.</strong></span> This means that it can safely be added as a <code class="literal">transport.type</code>, and it will only enable its authentication and SSL support when connecting to a an Elasticsearch cluster hosted by Found. This equals less differences in settings between local development, staging and production.</p><p>The plugin is open source and published on GitHub at <a class="ulink" href="https://github.com/foundit/elasticsearch-transport-module" target="_top">https://github.com/foundit/elasticsearch-transport-module</a>.</p><div class="section"><div class="titlepage"><div><div><h2 class="title"><a id="_versions"></a>Versions</h2></div></div></div><p>In order to determine the version you should be using, please consult <a class="ulink" href="https://github.com/foundit/elasticsearch-transport-module#versions" target="_top">this version overview</a>.</p><p>If you want to stay up to date with the latest releases and developments in the plugin, you are welcome to "watch" the <a class="ulink" href="https://github.com/foundit/elasticsearch-transport-module/" target="_top">repository on Github</a>.</p></div><div class="section"><div class="titlepage"><div><div><h2 class="title"><a id="_installing"></a>Installing</h2></div></div></div><p>Releases of the plugin are built and published to the Maven central repository. To install, add a dependency to this module in your build system :</p><div class="pre_wrapper"><pre class="programlisting prettyprint lang-xml">    &lt;dependency&gt;
+        &lt;groupId&gt;no.found.elasticsearch&lt;/groupId&gt;
+        &lt;artifactId&gt;elasticsearch-transport-module&lt;/artifactId&gt;
+        &lt;version&gt;{version-from-the-above-overview}&lt;/version&gt;
+    &lt;/dependency&gt;</pre></div><p>The module is enabled by adding this project as a dependency to your application
+and setting the <code class="literal">transport.type</code> setting in Elasticsearch to
+<code class="literal">no.found.elasticsearch.transport.netty.FoundNettyTransportModule</code>.</p><p>Note: This is not a standard Elasticsearch plugin, it just needs to be on the
+application classpath. This also means that if you’re trying to make a pre-built third-party application connect to your Elasticsearch cluster, you can download the jar from <a class="ulink" href="http://search.maven.org/#search|gav|1|g%3A%22no.found.elasticsearch%22%20AND%20a%3A%22elasticsearch-transport-module%22" target="_top">Maven central</a> and add it to the class path of the application.</p></div><div class="section"><div class="titlepage"><div><div><h2 class="title"><a id="_configuring_an_api_key"></a>Configuring an API Key</h2></div></div></div><p>In order to use this module, you must configure one or more API-keys. API-keys
+are stored as a list of acceptable keys under <code class="literal">api_keys</code> at the root level
+of the ACL. For example:</p><div class="pre_wrapper"><pre class="programlisting prettyprint lang-yaml">default: deny
+
+api_keys:
+    - s6aW9aAMZjDMbuhj
+    - 6hKZsTqBru9KnVaW
+
+auth:
+  users:
+    ...
+
+rules:
+  - ...</pre></div><p>In the above example, both <code class="literal">s6aW9aAMZjDMbuhj</code> and <code class="literal">6hKZsTqBru9KnVaW</code> would be
+valid API-keys. More on ACLs in <a class="link" href="access-control.html" title="Access Control">Access Control</a>.</p></div><div class="section"><div class="titlepage"><div><div><h2 class="title"><a id="_new_elasticsearch_settings"></a>New Elasticsearch Settings</h2></div></div></div><p>New settings introduced by this module:</p><div class="variablelist"><dl class="variablelist"><dt><span class="term">
+<code class="literal">transport.found.host-suffixes</code>
+</span></dt><dd>
+A comma-separated list of host suffixes that  trigger our attempt to
+authenticate with Found Elasticsearch. Defaults to
+<code class="literal">foundcluster.com,found.no</code>.
+</dd><dt><span class="term">
+<code class="literal">transport.found.ssl-ports</code>
+</span></dt><dd>
+A comma-separated list of ports that trigger our  SSL support. Defaults to
+<code class="literal">9343</code>.
+</dd><dt><span class="term">
+<code class="literal">transport.found.api-key</code>
+</span></dt><dd>
+An API-key which is used to authorize this client  when connecting to Found
+Elasticsearch. API-keys are managed via the console as  a list of Strings
+under the root level key "api_keys". Defaults to  <code class="literal">missing-api-key</code>
+</dd><dt><span class="term">
+<code class="literal">transport.found.ssl.unsafe_allow_self_signed</code>
+</span></dt><dd>
+Whether to accept self-signed  certificates when using SSL. This is unsafe and
+allows for MITM-attacks, but  may be useful for testing. Defaults to <code class="literal">false</code>.
+</dd><dt><span class="term">
+<code class="literal">transport.found.connection-keep-alive-interval</code>
+</span></dt><dd>
+The interval in which to send  keep-alive messages. Defaults to <code class="literal">20s</code>. Set to
+<code class="literal">0</code> to disable.
+</dd></dl></div></div><div class="section"><div class="titlepage"><div><div><h2 class="title"><a id="_recommended_tweaks_to_existing_settings"></a>Recommended Tweaks to Existing Settings:</h2></div></div></div><p>We recommend setting <code class="literal">client.transport.nodes_sampler_interval</code> to <code class="literal">30s</code> and setting
+<code class="literal">client.transport.ping_timeout</code> to <code class="literal">30s</code> when using Elasticsearch over non-local networks (this also goes for deployments in the same Amazon EC2 region, as the connections may be routed across a regions availability zones).</p><p>Not doing so may greatly increase the number of disconnects and reconnects due to intermittent slow routers / congested networks / garbage collection and a host of other transient problems.</p></div><div class="section"><div class="titlepage"><div><div><h2 class="title"><a id="_example_configuration"></a>Example Configuration</h2></div></div></div><div class="pre_wrapper"><pre class="programlisting prettyprint lang-java">// Build the settings for our transport client.
+Settings settings = ImmutableSettings.settingsBuilder()
+    // Setting "transport.type" enables this module:
+    .put("transport.type", "no.found.elasticsearch.transport.netty.FoundNettyTransportModule")
+    // Create an api key via the console and add it here:
+    .put("transport.found.api-key", "YOUR_API_KEY")
+
+    .put("cluster.name", "YOUR_CLUSTER_ID")
+
+    .put("client.transport.ignore_cluster_name", false)
+    .put("client.transport.nodes_sampler_interval", "30s")
+    .put("client.transport.ping_timeout", "30s")
+
+    .build();
+
+// Instantiate a TransportClient and add Found Elasticsearch to the list of addresses to connect to.
+// Only port 9343 (SSL-encrypted) is currently supported.
+Client client = new TransportClient(settings)
+    .addTransportAddress(new InetSocketTransportAddress("YOUR_CLUSTER_ID-REGION.foundcluster.com", 9343));</pre></div></div><div class="section"><div class="titlepage"><div><div><h2 class="title"><a id="_example_usage"></a>Example Usage</h2></div></div></div><div class="pre_wrapper"><pre class="programlisting prettyprint lang-java">while(true) {
+    try {
+        System.out.print("Getting cluster health... "); System.out.flush();
+        ActionFuture&lt;ClusterHealthResponse&gt; healthFuture = client.admin().cluster().health(Requests.clusterHealthRequest());
+        ClusterHealthResponse healthResponse = healthFuture.get(5, TimeUnit.SECONDS);
+        System.out.println("Got response: " + healthResponse.getStatus());
+    } catch(Throwable t) {
+        System.out.println("Error: " + t);
     }
-  ]
-}</pre></div><p>Do <span class="strong"><strong>NOT</strong></span> use an access key with more powers than necessary. Note that users with access to your cluster can read the repository configuration. Make sure you have configured <a class="link" href="access-control.html" title="Access Control">access control</a> for your cluster.</p><p>For more information on S3 and IAM, please consult AWS' <a class="ulink" href="http://docs.aws.amazon.com/AmazonS3/latest/dev/Introduction.html" target="_top">S3-documentation</a> and <a class="ulink" href="http://aws.amazon.com/documentation/iam/" target="_top">IAM-documentation</a>.</p></div><div class="section"><div class="titlepage"><div><div><h2 class="title"><a id="_creating_the_repository"></a>Creating the Repository</h2></div></div></div><p>With the bucket ready, you can create a repository by <code class="literal">PUT</code>-ing the following to <code class="literal">/_snapshot/repository_name</code>:</p><div class="pre_wrapper"><pre class="programlisting prettyprint lang-json">{
-  "type": "s3",
-  "settings": {
-    "bucket": "name-of-bucket",
-    "region": "region-of-bucket-same-as-cluster",
-    "access_key": "AKIAYOURKEYHERE",
-    "secret_key": "secret-key-with-just-permission-to-that-bucket-do-not-use-a-master-key",
-    "compress": true
-  }
-}</pre></div></div></div><div class="navfooter"><span class="prev"><a href="restoring-snapshots.html">
+    try {
+        Thread.sleep(3000);
+    } catch (InterruptedException ie) { ie.printStackTrace(); }
+}</pre></div></div><div class="section"><div class="titlepage"><div><div><h2 class="title"><a id="_dns_caching"></a>DNS-caching</h2></div></div></div><p>Note that the JVM will cache DNS lookups infinitely, by default. Since this client is connecting to a load balancer which can change IPs, it’s important to disable this functionality.</p><p>This can be done by setting the security property <code class="literal">networkaddress.cache.ttl</code> in <code class="literal">$JAVA_HOME/lib/security/java.security</code>. You can also do it programmatically, e.g. <code class="literal">java.security.Security.setProperty("networkaddress.cache.ttl" , "60")</code>.</p><p>Note that you can <span class="strong"><strong>not</strong></span> configure it as a JVM-property with, for example, <code class="literal">-Dnetworkaddress.cache.ttl=60</code>.</p></div><div class="section"><div class="titlepage"><div><div><h2 class="title"><a id="_complete_example"></a>Complete Example</h2></div></div></div><p>A complete, runnable example can be found at
+<a class="ulink" href="https://github.com/foundit/elasticsearch-transport-module-example" target="_top">https://github.com/foundit/elasticsearch-transport-module-example</a></p></div><div class="section"><div class="titlepage"><div><div><h2 class="title"><a id="_contributing"></a>Contributing</h2></div></div></div><p>Report issues in the <a class="ulink" href="https://github.com/foundit/elasticsearch-transport-module/issues" target="_top">issue tracker</a>.</p></div></div><div class="navfooter"><span class="prev"><a href="preflight-checklist.html">
               « 
-              Restoring Snapshots</a>
+              Preflight Checklist</a>
            
         </span><span class="next">
            
-          <a href="official-plugins.html">Plugins 
+          <a href="cluster-config.html">Cluster Configuration 
                »
             </a></span></div>
 <!-- end body -->
@@ -846,15 +920,15 @@
 
 <style type="text/css">
 	
-		.facebook{background:url("https://static-www.elastic.co/assets/bltda40eebd7c7cae9a/facebook.svg?q=123") no-repeat;}		
+		.facebook{background:url("https://stag-static-www.elastic.co/assets/bltda40eebd7c7cae9a/facebook.svg?q=127") no-repeat;}		
 	
-		.twitter{background:url("https://static-www.elastic.co/assets/bltfd3b1511512f4632/twitter.svg?q=123") no-repeat;}		
+		.twitter{background:url("https://stag-static-www.elastic.co/assets/bltfd3b1511512f4632/twitter.svg?q=127") no-repeat;}		
 	
-		.linkedin{background:url("https://static-www.elastic.co/assets/blt6b4f6f8d6b96f814/linkedin.svg?q=123") no-repeat;}		
+		.linkedin{background:url("https://stag-static-www.elastic.co/assets/blt6b4f6f8d6b96f814/linkedin.svg?q=127") no-repeat;}		
 	
-		.xing{background:url("https://static-www.elastic.co/assets/blta76b2ae2b2f10a98/xing.svg?q=123") no-repeat;}		
+		.xing{background:url("https://stag-static-www.elastic.co/assets/blta76b2ae2b2f10a98/xing.svg?q=127") no-repeat;}		
 	
-		.youtube{background:url("https://static-www.elastic.co/assets/blt5761648c9581fb53/youtube.svg?q=123") no-repeat;}		
+		.youtube{background:url("https://stag-static-www.elastic.co/assets/blt5761648c9581fb53/youtube.svg?q=127") no-repeat;}		
 	
 </style>
 
@@ -878,8 +952,8 @@ MktoForms2.loadForm("//app-lon02.marketo.com", "813-MAM-392", 1398,function(form
    	<script type="text/javascript">
 	var suggestionsUrl = "https://search.elastic.co/suggest";	
 </script>
-<script src="https://static-www.elastic.co/static/js/jquery.autocomplete.js?q=123"></script>
-<script src="https://static-www.elastic.co/static/js/script.js?q=123"></script>
+<script src="https://stag-static-www.elastic.co/static/js/jquery.autocomplete.js?q=127"></script>
+<script src="https://stag-static-www.elastic.co/static/js/script.js?q=127"></script>
 
 
    	

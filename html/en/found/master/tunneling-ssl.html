@@ -2,7 +2,7 @@
 <!DOCTYPE HTML>
 <html lang="en-us">
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>Uploading Scripts</title><meta name="generator" content="DocBook XSL Stylesheets V1.78.1" /><link rel="home" href="index.html" title="Found Documentation" /><link rel="up" href="official-plugins.html" title="Plugins" /><link rel="prev" href="official-plugins.html" title="Plugins" /><link rel="next" href="dashboards.html" title="Dashboards" /><meta name="DC.type" content="Docs/Found/Reference" />
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>Tunneling SSL</title><meta name="generator" content="DocBook XSL Stylesheets V1.78.1" /><link rel="home" href="index.html" title="Found Documentation" /><link rel="up" href="security-checklist.html" title="Securing your Cluster" /><link rel="prev" href="security-checklist.html" title="Securing your Cluster" /><link rel="next" href="shield.html" title="Shield" /><meta name="DC.type" content="Docs/Found/Reference" />
   
  	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
 
@@ -51,17 +51,27 @@
 	<meta property="og:image" content="https://www.elastic.co/static/img/elastic-logo-200.png" />
 	
 
+		<link rel="alternate" href="https://stag-www.elastic.co/guide_template" hreflang="en-us" />
+	
+		<link rel="alternate" href="https://stag-www.elastic.co/de/guide_template" hreflang="de-de" />
+	
+		<link rel="alternate" href="https://stag-www.elastic.co/fr/guide_template" hreflang="fr-fr" />
+	
+		<link rel="alternate" href="https://stag-www.elastic.co/jp/guide_template" hreflang="ja-jp" />
+	
+		<link rel="alternate" href="https://stag-www.elastic.co/kr/guide_template" hreflang="ko-kr" />
+	
 
 	
-	<link type="text/css" rel="stylesheet" href="https://static-www.elastic.co/static/css/skel.css?q=123" />
-	<link type="text/css" rel="stylesheet" href="https://static-www.elastic.co/static/css/style.css?q=123" />	
-	<script src="https://static-www.elastic.co/static/js/skel.min.js?q=123"></script>
+	<link type="text/css" rel="stylesheet" href="https://stag-static-www.elastic.co/static/css/skel.css?q=127" />
+	<link type="text/css" rel="stylesheet" href="https://stag-static-www.elastic.co/static/css/style.css?q=127" />	
+	<script src="https://stag-static-www.elastic.co/static/js/skel.min.js?q=127"></script>
 	
-		<script type="text/javascript">form_name = "" ; cdn_url="https://static-www.elastic.co";cdn_slug = "123"</script>
+		<script type="text/javascript">form_name = "" ; cdn_url="https://stag-static-www.elastic.co";cdn_slug = "127"</script>
 	
-	<script src="https://static-www.elastic.co/static/js/init.js?q=123"></script>
-	<script src="https://static-www.elastic.co/static/js/jquery.min.js?q=123"></script>
-	<script src="https://static-www.elastic.co/static/js/jquery.cookie.js?q=123"></script>
+	<script src="https://stag-static-www.elastic.co/static/js/init.js?q=127"></script>
+	<script src="https://stag-static-www.elastic.co/static/js/jquery.min.js?q=127"></script>
+	<script src="https://stag-static-www.elastic.co/static/js/jquery.cookie.js?q=127"></script>
 	<!--<script type="text/javascript">
 	    (function() {
 	        var path = '//easy.myfonts.net/v2/js?sid=10336(font-family=Avenir+35+Light)&sid=10338(font-family=Avenir+55+Roman)&sid=10340(font-family=Avenir+85+Heavy)&sid=10344(font-family=Avenir+65+Medium)&key=nAD6PCOPrX',
@@ -683,15 +693,15 @@
 	
 	
 		.m-shortcuts li a.m-search {
-			background: url("https://static-www.elastic.co/assets/blt174b13be89ff803c/m-search-icon.png?q=123") no-repeat scroll center center rgba(0, 0, 0, 0);
+			background: url("https://stag-static-www.elastic.co/assets/blt174b13be89ff803c/m-search-icon.png?q=127") no-repeat scroll center center rgba(0, 0, 0, 0);
 			background-size: contain;}
 	
 		.m-shortcuts li a.m-docs {
-			background: url("https://static-www.elastic.co/assets/blt5ba03f594a7d610a/m-guide-icon.png?q=123") no-repeat scroll center center rgba(0, 0, 0, 0);
+			background: url("https://stag-static-www.elastic.co/assets/blt5ba03f594a7d610a/m-guide-icon.png?q=127") no-repeat scroll center center rgba(0, 0, 0, 0);
 			background-size: contain;}
 	
 		.m-shortcuts li a.m-contact {
-			background: url("https://static-www.elastic.co/assets/blt38c3e853c4b1174d/m-contact-icon.png?q=123") no-repeat scroll center center rgba(0, 0, 0, 0);
+			background: url("https://stag-static-www.elastic.co/assets/blt38c3e853c4b1174d/m-contact-icon.png?q=127") no-repeat scroll center center rgba(0, 0, 0, 0);
 			background-size: contain;}
 		
 </style>
@@ -711,86 +721,59 @@
 <section id="guide">
 
             <!-- start body -->
-<div class="breadcrumbs"><span class="breadcrumb-link"><a href="index.html">Found Documentation</a></span> » <span class="breadcrumb-link"><a href="official-plugins.html">Plugins </a></span> » <span class="breadcrumb-node">Uploading Scripts</span></div><div class="navheader"><span class="prev"><a href="official-plugins.html">
+<div class="breadcrumbs"><span class="breadcrumb-link"><a href="index.html">Found Documentation</a></span> » <span class="breadcrumb-link"><a href="security-checklist.html">Securing your Cluster </a></span> » <span class="breadcrumb-node">Tunneling SSL</span></div><div class="navheader"><span class="prev"><a href="security-checklist.html">
               « 
-              Plugins </a>
+              Securing your Cluster </a>
            
         </span><span class="next">
            
-          <a href="dashboards.html">Dashboards
+          <a href="shield.html">Shield
                »
-            </a></span></div><div class="chapter"><div class="titlepage"><div><div><h2 class="title"><a id="uploading-scripts"></a>Uploading Scripts</h2></div></div></div><p><span class="strong"><strong>How to use scripts with dynamic scripting disabled</strong></span></p><p>It is good practice to run with <a class="ulink" href="https://www.elastic.co/blog/found-elasticsearch-security?q=securing#scripting-for-fun-and-profit" target="_top">dynamic scripts disabled</a>.</p><p>To use scripts with dynamic scripts disabled, you need to <a class="link" href="custom-bundles.html" title="Custom Plugins and Bundles">upload a bundle</a> containing the scripts. A bundle is a zip file that you upload and associate with your cluster’s configuration.</p><p>The bundle needs to contain a folder named <code class="literal">scripts/</code>, with the scripts inside. Scripts in sub-folders must be referred to with <code class="literal">_</code> as the delimiter, and not <code class="literal">/</code>. For example, the script <code class="literal">scripts/foo/bar.grovy</code> must be referred to as <code class="literal">foo_bar</code>.</p><p>Here’s an example of three scripts and how to invoke them:</p><div class="pre_wrapper"><pre class="programlisting prettyprint lang-text">$ tree scripts # Show files and their placement
-scripts
-├── module1
-│   └── script_name.groovy
-├── module2
-│   └── other_script.groovy
-└── top_level.groovy
+            </a></span></div><div class="chapter"><div class="titlepage"><div><div><h2 class="title"><a id="tunneling-ssl"></a>Tunneling SSL</h2></div></div></div><p><span class="strong"><strong>When Your Client Just Supports HTTP</strong></span></p><p>While Found recommends always using SSL/HTTPS, not all clients support HTTPS (a notable example being <a class="ulink" href="https://github.com/elasticsearch/logstash/pull/1393" target="_top">Logstash</a>). Also, some clients have poor support, for example, because they do not actually verify the certificate.</p><p>To work around this, you can use a proxy or a tunnel. The application without HTTPS-support can connect to a local endpoint using HTTP, which in turn connects to a Found cluster using HTTPS.</p><div class="section"><div class="titlepage"><div><div><h2 class="title"><a id="_tunneling_with_stunnel"></a>Tunneling With "stunnel"</h2></div></div></div><p><a class="ulink" href="https://www.stunnel.org/index.html" target="_top">stunnel</a> is tool that can be used to provide secure encrypted connections for clients or servers that do not speak TLS or SSL natively.</p><p>We can use stunnel to bind to a port on localhost (e.g., 19200), which in turn will connect to Found.</p><p>Here is a sample configuration to achieve this:</p><div class="pre_wrapper"><pre class="programlisting prettyprint lang-ini">; Actually verify the certificate
+verify = 2
+; Works for Ubuntu. Adapt to your system.
+CApath = /etc/ssl/certs
 
-$ cat scripts/top_level.groovy
-123 * my_var
+pid = /var/run/stunnel4/found-us-east-1.pid
 
-$ cat scripts/module1/script_name.groovy
-42 + my_var
+; Log level. WARN=4, DEBUG=7
+debug = 4
 
-$ cat scripts/module2/other_script.groovy
-42 * my_var
+[foundcluster]
+; Service that tunnels traffic to a single region's endpoint. This configuration is not cluster specific.
+accept = 19200
+client = yes
+; Don't cache DNS. IPs of Found's load balancers may change.
+delay = yes
+; Replace us-east-1 with your region. Valid hosts:
+; - proxy-v1-us-east-1.foundcluster.com
+; - proxy-v1-us-west-1.foundcluster.com
+; - proxy-v1-eu-west-1.foundcluster.com
+; - proxy-v1-sa-east-1.foundcluster.com
+; - proxy-v1-ap-northeast-1.foundcluster.com
+; - proxy-v1-ap-southeast-1.foundcluster.com
 
-$ zip my-scripts.zip -r scripts # make a zip-bundle of the scripts
-  adding: scripts/ (stored 0%)
-  adding: scripts/module1/ (stored 0%)
-  adding: scripts/module1/script_name.groovy (stored 0%)
-  adding: scripts/module2/ (stored 0%)
-  adding: scripts/module2/other_script.groovy (stored 0%)
-  adding: scripts/top_level.groovy (stored 0%)</pre></div><p>With these scripts, you can upload <code class="literal">my-scripts.zip</code> as a bundle and associate them with a cluster.</p><p>Then, you can use them like the following:</p><div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem">
-The script <code class="literal">scripts/top_level.groovy</code> can be referred to as <code class="literal">top_level</code>:
-</li></ul></div><div class="pre_wrapper"><pre class="programlisting prettyprint lang-json">{
-    "size": 1,
-    "script_fields": {
-        "foo": {
-            "script": "top_level",
-            "params": {
-                "my_var": 2
-            }
-        }
-    }
-}</pre></div><div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem">
-The script <code class="literal">scripts/module1/script_name.groovy</code> can be referred to as <code class="literal">module1_script_name</code>
-</li></ul></div><div class="pre_wrapper"><pre class="programlisting prettyprint lang-json">{
-    "size": 1,
-    "script_fields": {
-        "foo": {
-            "script": "module1_script_name",
-            "params": {
-                "my_var": 2
-            }
-        }
-    }
-}</pre></div><div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem">
-The script <code class="literal">scripts/module2/other_script.groovy</code> can be referred to as <code class="literal">module2_other_script</code>:
-</li></ul></div><div class="pre_wrapper"><pre class="programlisting prettyprint lang-json">{
-    "size": 1,
-    "script_fields": {
-        "sample_field": {
-            "script": "module2_other_script",
-            "params": {
-                "my_var": 2
-            }
-        }
-    }
-}</pre></div><div class="section"><div class="titlepage"><div><div><h2 class="title"><a id="_summary"></a>Summary</h2></div></div></div><div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem">
-<a class="link" href="custom-bundles.html" title="Custom Plugins and Bundles">Upload scripts as a zipped bundle</a>, where scripts reside in a <code class="literal">scripts/</code> folder.
+connect = proxy-v1-us-east-1.foundcluster.com:9243</pre></div><p>To use this with Ubuntu:</p><div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem">
+Install the <code class="literal">stunnel4</code>-package, e.g. <code class="literal">apt-get install stunnel4</code>.
 </li><li class="listitem">
-Associate the bundle with your cluster, by enabling the bundle under "Custom plugins / dictionaries / scripts" for the cluster.
+Put the above file in <code class="literal">/etc/stunnel/found-us-east-1.conf</code>
 </li><li class="listitem">
-Refer to scripts with folder names as modules, for example <code class="literal">scripts/module_name/script_name.groovy</code> becomes <code class="literal">module_name_script_name</code>.
-</li></ul></div></div></div><div class="navfooter"><span class="prev"><a href="official-plugins.html">
+Make sure <code class="literal">/etc/default/stunnel4</code> contains <code class="literal">ENABLED=1</code>
+</li><li class="listitem">
+Run <code class="literal">service stunnel4 start</code>
+</li></ul></div><p>Then you will have a service that listens to port 19200 and forwards traffic to <code class="literal">proxy-v1-us-east-1.foundcluster.com:9243</code>.</p></div><div class="section"><div class="titlepage"><div><div><h2 class="title"><a id="_connecting"></a>Connecting</h2></div></div></div><p>Now we have a service that listens to port 19200 and tunnels traffic to Found, while making sure the traffic is encrypted and that the certificate is valid.</p><p>However, if you try to send HTTP requests to <code class="literal">http://localhost:19200</code>, no information is forwarded about what cluster requests must be routed to.</p><p>Typically, endpoints are on the form <code class="literal">[cluster id]-[region].foundcluster.com</code>. The hostname is what specifies what cluster requests will be routed to.</p><p>A compatible hostname must be sent to Found, but we still want to connect to <code class="literal">127.0.0.1</code>.</p><p>To do this, we can use <a class="ulink" href="http://xip.io" target="_top">xip.io</a>. By connecting to <code class="literal">http://[your-cluster-id]-[region].127.0.0.1.xip.io:19200</code>, e.g. <code class="literal">http://7893883873a705aec69e2942901f20d7b1e28dec-us-east-1.127.0.0.1.xip.io</code>, the hostname will resolve to <code class="literal">127.0.0.1</code> and the hostname with the cluster id will be sent to Found.</p><p>Found then has sufficient information to route requests to your cluster.</p><p>While this hostname is not matching that of the SSL certificate (which matches *.foundcluster.com), it is stunnel that is terminating the SSL-connection. stunnel knows nothing about HTTP, and the client connecting to 19200 is completely unaware that traffic is being tunneled through SSL.</p><p>Note that stunnel will establish a new SSL-connection for every client that connects to it. It is important to use persistent connections, even though you are connecting to localhost. If not, you will be spending a lot of time establishing SSL-connections!</p></div><div class="section"><div class="titlepage"><div><div><h2 class="title"><a id="_configuring_logstash"></a>Configuring Logstash</h2></div></div></div><p>A common use case for this is when running Logstash outside AWS infrastructure, while wanting to use a cluster managed by Found.</p><p>Assuming you have configured stunnel appropriately, you can then use the <code class="literal">elasticsearch_http</code>-output of Logstash, and point it to localhost. (While you can specify <code class="literal">protocol =&gt; http</code> with the <code class="literal">elasticsearch</code>-output, the latter does not support basic auth at the moment. We recommend configuring ACLs that require basic auth as well.)</p><p>Here is an example:</p><div class="pre_wrapper"><pre class="programlisting prettyprint lang-text">elasticsearch_http {
+        host =&gt; "7893883873a705aec69e2942901f20d7b1e28dec-us-east-1.127.0.0.1.xip.io"
+        user =&gt; "readwrite"
+        password =&gt; "yourpassword"
+        manage_template =&gt; false
+        port =&gt; 19200
+}</pre></div></div></div><div class="navfooter"><span class="prev"><a href="security-checklist.html">
               « 
-              Plugins </a>
+              Securing your Cluster </a>
            
         </span><span class="next">
            
-          <a href="dashboards.html">Dashboards
+          <a href="shield.html">Shield
                »
             </a></span></div>
 <!-- end body -->
@@ -889,15 +872,15 @@ Refer to scripts with folder names as modules, for example <code class="literal"
 
 <style type="text/css">
 	
-		.facebook{background:url("https://static-www.elastic.co/assets/bltda40eebd7c7cae9a/facebook.svg?q=123") no-repeat;}		
+		.facebook{background:url("https://stag-static-www.elastic.co/assets/bltda40eebd7c7cae9a/facebook.svg?q=127") no-repeat;}		
 	
-		.twitter{background:url("https://static-www.elastic.co/assets/bltfd3b1511512f4632/twitter.svg?q=123") no-repeat;}		
+		.twitter{background:url("https://stag-static-www.elastic.co/assets/bltfd3b1511512f4632/twitter.svg?q=127") no-repeat;}		
 	
-		.linkedin{background:url("https://static-www.elastic.co/assets/blt6b4f6f8d6b96f814/linkedin.svg?q=123") no-repeat;}		
+		.linkedin{background:url("https://stag-static-www.elastic.co/assets/blt6b4f6f8d6b96f814/linkedin.svg?q=127") no-repeat;}		
 	
-		.xing{background:url("https://static-www.elastic.co/assets/blta76b2ae2b2f10a98/xing.svg?q=123") no-repeat;}		
+		.xing{background:url("https://stag-static-www.elastic.co/assets/blta76b2ae2b2f10a98/xing.svg?q=127") no-repeat;}		
 	
-		.youtube{background:url("https://static-www.elastic.co/assets/blt5761648c9581fb53/youtube.svg?q=123") no-repeat;}		
+		.youtube{background:url("https://stag-static-www.elastic.co/assets/blt5761648c9581fb53/youtube.svg?q=127") no-repeat;}		
 	
 </style>
 
@@ -921,8 +904,8 @@ MktoForms2.loadForm("//app-lon02.marketo.com", "813-MAM-392", 1398,function(form
    	<script type="text/javascript">
 	var suggestionsUrl = "https://search.elastic.co/suggest";	
 </script>
-<script src="https://static-www.elastic.co/static/js/jquery.autocomplete.js?q=123"></script>
-<script src="https://static-www.elastic.co/static/js/script.js?q=123"></script>
+<script src="https://stag-static-www.elastic.co/static/js/jquery.autocomplete.js?q=127"></script>
+<script src="https://stag-static-www.elastic.co/static/js/script.js?q=127"></script>
 
 
    	
